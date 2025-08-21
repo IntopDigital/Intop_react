@@ -27,3 +27,8 @@ body {
   text-shadow: var(--shadow-1), var(--shadow-2), var(--shadow-3),
     var(--shadow-4), var(--shadow-5), var(--shadow-6);
 }
+
+.perspective-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}

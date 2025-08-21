@@ -7,6 +7,7 @@ class ErrorBoundary extends React.Component {
   }
 
   static getDerivedStateFromError(error) {
+    // Update state so next render shows fallback UI
     return { hasError: true };
   }
 
@@ -14,8 +15,8 @@ class ErrorBoundary extends React.Component {
     console.error("ErrorBoundary caught an error:", error, errorInfo);
 
     this.setState({
-      error: error,
-      errorInfo: errorInfo,
+      error,
+      errorInfo,
     });
   }
 
@@ -37,7 +38,7 @@ class ErrorBoundary extends React.Component {
               Refresh Page
             </button>
 
-            {/* Show error details in development - CORRECTED FOR VITE */}
+            {/* Show error details only in development */}
             {import.meta.env.DEV && (
               <details className="mt-4 text-left">
                 <summary className="cursor-pointer text-gray-500 text-sm">
@@ -46,7 +47,8 @@ class ErrorBoundary extends React.Component {
                 <pre className="mt-2 text-xs text-red-500 overflow-auto bg-gray-100 p-2 rounded">
                   {this.state.error && this.state.error.toString()}
                   <br />
-                  {this.state.errorInfo.componentStack}
+                  {this.state.errorInfo?.componentStack ||
+                    "No component stack available."}
                 </pre>
               </details>
             )}

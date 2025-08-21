@@ -153,8 +153,8 @@ const ScrollImageSequenceSection = () => {
 
   // --- CONFIGURATION ---
   const totalFrames = 200;
-  const imagePath = "/sky_to_space/"; // Folder in your `public` directory
-  const imageName = "sky to space trasnsition_00"; // Make sure the base name is correct
+  const imagePath = "/sky_transitin/"; // Folder in your `public` directory
+  const imageName = "syy to space02g_00"; // Make sure the base name is correct
   const imageExtension = ".jpg";
 
   const [loadedImages, setLoadedImages] = useState([]);
@@ -163,7 +163,7 @@ const ScrollImageSequenceSection = () => {
   // 1. Preload all the images
   useEffect(() => {
     const framePaths = [];
-    for (let i = 1; i <= totalFrames; i++) {
+    for (let i = 30; i <= totalFrames; i++) {
       const frameNumber = String(i).padStart(3, "0");
       framePaths.push(
         `${imagePath}${imageName}${frameNumber}${imageExtension}`

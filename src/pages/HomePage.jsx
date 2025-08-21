@@ -1,6 +1,7 @@
 import React from "react";
 import ScrollImageSequenceSection from "../components/ScrollImageSequenceSection";
-import LiquidTextEffect from "../components/LiquidTextEffect";
+
+import ServicePage from "./ServicePage";
 
 const HomePage = () => {
   return (
@@ -8,8 +9,8 @@ const HomePage = () => {
       <ScrollImageSequenceSection />
       <div className="w-full h-[100vh] bg-blue-300">
         <h1>this is next page</h1>
-        <LiquidTextEffect />
       </div>
+      <ServicePage />
     </>
   );
 };

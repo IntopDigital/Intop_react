@@ -83,7 +83,12 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/" className="flex items-center">
-                <IntopLogoAnimate />
+                <img
+                  className="w-24 h-auto"
+                  src="/images/Intop-logo.png"
+                  alt="logo image"
+                />
+                {/* <IntopLogoAnimate /> */}
               </Link>
             </div>
 
