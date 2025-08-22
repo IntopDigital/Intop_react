@@ -23,15 +23,15 @@ const ContactPage = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/video/water_3.mp4" type="video/mp4" />
+        <source src="/video/office 1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="absolute inset-0 bg-black/20 z-10"></div>
 
       {/* Contact Form */}
-      <div className="relative z-20 flex justify-center items-center h-full px-4 bg-transparent ">
+      {/* <div className="relative z-20 flex justify-center items-center h-full px-4 bg-transparent ">
         <div
           ref={formRef}
           className="bg-white/10 backdrop-blur-lg shadow-2xl rounded-2xl p-8 w-full max-w-lg"
@@ -78,7 +78,7 @@ const ContactPage = () => {
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
