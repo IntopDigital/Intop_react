@@ -31,7 +31,7 @@ const ContactPage = () => {
       <div className="absolute inset-0 bg-black/20 z-10"></div>
 
       {/* Contact Form */}
-      {/* <div className="relative z-20 flex justify-center items-center h-full px-4 bg-transparent ">
+      <div className="relative z-20 flex justify-center items-center h-full px-4 bg-transparent ">
         <div
           ref={formRef}
           className="bg-white/10 backdrop-blur-lg shadow-2xl rounded-2xl p-8 w-full max-w-lg"
@@ -78,7 +78,7 @@ const ContactPage = () => {
             </button>
           </form>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

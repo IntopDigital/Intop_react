@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import DesktopNavigation from "./DesktopNavigation";
 import MobileNavigation from "./MobileNavigation";
 
-import IntopLogoAnimate from "../../ui/IntopLogoAnimate";
-
 // -------------------- DATA --------------------
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   {
     name: "Service",
-    href: "#",
+    href: "/Services",
     dropdownIdentifier: "service",
     iconUrl: "/images/cartoon.png", // Make sure this path is correct
     dropdown: [
@@ -63,7 +61,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* The backdrop for both desktop dropdowns and mobile menu */}
       {isBackdropVisible && (
         <div
           className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm"

@@ -229,15 +229,6 @@ const MobileNavigation = ({
               )}
             </div>
           ))}
-          <div className="mt-6 pt-6 border-t border-slate-700 px-2">
-            <a
-              href="#"
-              onClick={handleMobileMenuClose}
-              className="block w-full text-center bg-white text-slate-900 hover:bg-slate-200 text-sm font-medium px-4 py-2.5 rounded-full transition-all duration-200"
-            >
-              Log In
-            </a>
-          </div>
         </div>
       </div>
     </>

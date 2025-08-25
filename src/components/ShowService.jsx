@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react"; // <-- IMPORT useLayoutEffect
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ServiceThreeCard } from "./ServiceThreeCard"; // <-- IMPORT THE NEW COMPONENT
-
+import { ServiceThreeCard } from "./ServiceThreeCard";
+import { Link } from "react-router-dom";
 // ----- IMPORT YOUR ASSETS -----
 import thumb1 from "/images/service1.png";
 import thumb2 from "/images/service1.png";
@@ -46,7 +46,8 @@ gsap.registerPlugin(ScrollTrigger);
 const ShowService = () => {
   const componentRef = useRef(null);
 
-  useEffect(() => {
+  // ▼▼▼ USE useLayoutEffect INSTEAD OF useEffect ▼▼▼
+  useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       const wrappers = gsap.utils.toArray(".service-card-wrapper");
 
@@ -106,7 +107,7 @@ const ShowService = () => {
     }, componentRef);
 
     return () => ctx.revert();
-  }, []);
+  }, []); // ▲▲▲ END OF CHANGE ▲▲▲
 
   return (
     <div
@@ -123,7 +124,6 @@ const ShowService = () => {
               transform: `translateX(${index % 2 === 0 ? "-105%" : "5%"})`,
             }}
           >
-            {/* --- USE THE NEW 3D CARD COMPONENT --- */}
             <ServiceThreeCard
               id={service.id}
               title={service.title}
